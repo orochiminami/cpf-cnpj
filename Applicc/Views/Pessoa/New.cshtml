@@ -1,0 +1,26 @@
+﻿@model Applicc.Models.PessoaModel
+
+@{
+    ViewBag.Title = "Inserção de Pessoa";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Salvar", "Pessoa", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <table class="table">
+        @Html.Partial("PartialManter", Model)
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Salvar" /></td>
+        </tr>
+    </table>
+}
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+
+}

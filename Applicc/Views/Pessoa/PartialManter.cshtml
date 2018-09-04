@@ -1,0 +1,14 @@
+﻿@model Applicc.Models.PessoaModel
+
+<tr>
+    <td>@Html.LabelFor(model => model.Nome)</td>
+    <td>@Html.TextBoxFor(model => model.Nome, new { maxlength = 100 }) @Html.ValidationMessageFor(model => model.Nome)</td>
+</tr>
+<tr>
+    <td>@Html.LabelFor(model => model.Nascimento)</td>
+    <td>@Html.EditorFor(model => model.Nascimento) @Html.ValidationMessageFor(model => model.Nascimento)</td>
+</tr>
+<tr>
+    <td>@Html.LabelFor(model => model.Sexo)</td>
+    <td>@Html.EnumDropDownListFor(model => model.Sexo) @Html.ValidationMessageFor(model => model.Sexo)</td>
+</tr>
